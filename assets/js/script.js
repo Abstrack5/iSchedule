@@ -1,7 +1,6 @@
 var currentDay = moment().format("dddd, MMMM Do, YYYY");
 $("#currentDay").text(currentDay);
 
-
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     var scheduledContent = $(this).siblings(".content").val();
@@ -14,7 +13,7 @@ $(document).ready(function () {
 
   function checkHourChangeColor() {
     $(".timeRow").each(function () {
-      var scheduledTime = parseInt($(this).attr("id"));
+      var scheduledTime = parseInt($(this).attr("id").split("-")[1]);
 
       if (scheduledTime < currentHour) {
         $(this).addClass("future");
@@ -27,15 +26,15 @@ $(document).ready(function () {
   }
 
   // trying to get the content from localStorage
-  $("#9 .content").val(localStorage.getItem("9"));
-  $("#10 .content").val(localStorage.getItem("10"));
-  $("#11 .content").val(localStorage.getItem("11"));
-  $("#12 .content").val(localStorage.getItem("12"));
-  $("#13 .content").val(localStorage.getItem("13"));
-  $("#14 .content").val(localStorage.getItem("14"));
-  $("#15 .content").val(localStorage.getItem("15"));
-  $("#16 .content").val(localStorage.getItem("16"));
-  $("#17 .content").val(localStorage.getItem("17"));
+  $("#9 .content").val(localStorage.getItem("time-9"));
+  $("#10 .content").val(localStorage.getItem("time-10"));
+  $("#11 .content").val(localStorage.getItem("time-11"));
+  $("#12 .content").val(localStorage.getItem("time-12"));
+  $("#13 .content").val(localStorage.getItem("time-13"));
+  $("#14 .content").val(localStorage.getItem("time-14"));
+  $("#15 .content").val(localStorage.getItem("time-15"));
+  $("#16 .content").val(localStorage.getItem("time-16"));
+  $("#17 .content").val(localStorage.getItem("time-17"));
 
   checkHourChangeColor();
 });
