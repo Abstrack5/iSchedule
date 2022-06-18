@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <title>iSchedule</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -12,10 +14,10 @@
 
 <body>
 
-    <header>
-        <h1>iSchedule</h1>
-        <p>A schedule, for i</p>
-        <p id="currentDay"></p>
+    <header class="header pt-3">
+        <h1 >iSchedule</h1>
+        <p>Dont forget about... </p>
+        <p><span id="currentDay" ></span></p>
     </header>
 
     <div class="container">
@@ -111,7 +113,9 @@
         </div>
 
     </div>
-
+    <footer class="footer py-3">
+        <h3>End of work day!</h3>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
