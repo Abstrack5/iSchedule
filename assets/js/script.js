@@ -16,17 +16,11 @@ $(document).ready(function () {
     $(".timeRow").each(function () {
       var scheduledTime = parseInt($(this).attr("id").split("-")[1]);
 
-      if (scheduledTime > currentHour) {
-        $(this).removeClass("past");
-        $(this).removeClass("present");
+      if (scheduledTime < currentHour) {
         $(this).addClass("future");
       } else if (scheduledTime === currentHour) {
-        $(this).removeClass("future");
-        $(this).removeClass("past");
         $(this).addClass("present");
       } else {
-        $(this).removeClass("present");
-        $(this).removeClass("future");
         $(this).addClass("past");
       }
     })
