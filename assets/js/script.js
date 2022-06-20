@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".timeRow").each(function () {
       var scheduledTime = parseInt($(this).attr("id").split("-")[1]);
 
-      if (scheduledTime <= currentHour) {
+      if (scheduledTime > currentHour) {
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
